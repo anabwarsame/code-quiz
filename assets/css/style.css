@@ -35,3 +35,13 @@ p {
   align-items: center;
   margin: 0 auto;
 }
+
+.start-container:hover {
+  cursor: pointer;
+  box-shadow: hotpink;
+  transition: transform 200ms;
+}
+
+.highscore-btn {
+  background: linen;
+}
