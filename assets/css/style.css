@@ -5,7 +5,7 @@
   padding: 0%;
 }
 
-#timer {
+.header-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -35,7 +35,9 @@ p {
   align-items: center;
   margin: 0 auto;
 }
-
+.start-quiz:hover {
+  cursor: pointer;
+}
 .start-container:hover {
   cursor: pointer;
   box-shadow: hotpink;
