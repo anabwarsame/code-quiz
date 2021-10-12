@@ -1,12 +1,12 @@
 :root {
-  background-color: rgb(185, 180, 255);
+  background-color: hsl(115, 86%, 14%);
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
 }
 
 .nav-container {
-  background-color: rgb(143, 235, 215);
+  background-color: rgb(92, 153, 133);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -36,30 +36,79 @@ p {
   text-align: center;
 }
 .start-quiz {
-  background-color: rgb(143, 235, 215);
+  background-color: rgb(92, 153, 133);
+  color: white;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   font-size: 1.4rem;
+  letter-spacing: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
 }
 .start-quiz:hover {
   cursor: pointer;
-}
-.start-container:hover {
-  cursor: pointer;
-  box-shadow: hotpink;
-  transition: transform 200ms;
+  color: rgb(92, 153, 133);
+  background-color: white;
 }
 
-.highscore-btn {
-  background: linen;
+.question-container {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 2rem;
+  padding: 3.5rem;
+  border: solid black;
+}
+
+.questions {
+  font: 1.4rem;
+  font-weight: 400;
+  border: solid black;
+}
+
+.answer-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2.5rem;
+}
+
+.answer-item {
+  margin: 1rem 0;
+  padding: 1rem;
+  font-weight: 200rem;
+  font-size: 1rem;
+  background-color: rgb(92, 153, 133);
+  color: white;
+}
+.answer-item:hover {
+  cursor: pointer;
+  color: rgb(92, 153, 133);
+  background-color: white;
 }
 
 @media screen and (max-width: 576px) {
   .nav-container {
     flex-direction: column;
     align-items: center;
+  }
+  .question-container {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0 2rem;
+    padding: 3.5rem;
+  }
+
+  .questions {
+    font: 1.4rem;
+    font-weight: 400;
+  }
+
+  .answer-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2.5rem;
+    border: solid black;
   }
 }
