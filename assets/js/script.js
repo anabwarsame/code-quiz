@@ -1,37 +1,56 @@
 const startButton = document.getElementById("start-quiz");
+function renderQuestion()
+
+let currentQuestionIndex
+let shuffledQuestions
+const questionElement =document.createElement("h1")
+const answerButtons =document.createElement("button")
+
 
 startButton.addEventListener("click", startQuiz);
 
 function startQuiz() {
-    questionContainer
+  const questionContainer = document.createElement("div");
+  console.log("started");
+  startButton.remove();
+  shuffledQuestions= capitalCityQuestions.sort( ()=> Math.random()- .5)
+  currentQuestionIndex = 0
+  renderNextQuestion()
 }
-console.log("started");
+ 
+function renderNextQuestion(){
+  displayQuestion(shuffledQuestions[currentQuestionIndex])
+}
+
+function displayQuestion(question){
+  questionElement.innerText= question.question
+}
+
 
 const capitalCityQuestions = [
   {
     question: "what is the capital city of portugal?",
     answers: ["Madrid", "Paris", "Lisbon", " Athens"],
-    coorectAnswer: "Lisbon",
+    correctAnswer: "Lisbon",
   },
   {
     question: "what is the capital city of USA?",
     answers: [" Washington DC", "New York", "Los Angeles", "Boston"],
-    coorectAnswer: "Washington DC",
+    correctAnswer: "Washington DC",
   },
   {
     question: "what is the capital city of Russia?",
     answers: ["Moscow", "St Petersburg", "Prague", "Riga"],
-    coorectAnswer: "Moscow",
+    correctAnswer: "Moscow",
   },
   {
     question: "what is the capita city of Canada?",
     answers: ["Toronto", "Vancouver", "Ottawa", "Quebec"],
-    coorectAnswer: "Ottawa",
+    correctAnswer: "Ottawa",
   },
 ];
 
+// const currenQuestionIndex, shuffedQuestions
+// const timer = setInterval(timerTick, 1000);
 
-const currenQuestionIndex, shuffedQuestions
-const timer = setInterval(timerTick, 1000);
-
-startTimer;
+//startTimer;

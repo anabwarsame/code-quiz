@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
   <body>
     <header class="header-container">
-      <div class="highscore-btn header-item">
-        highscore
-        <a href="highscore"></a>
-      </div>
+      <nav class="nav-container">
+        <div class="nav-item">
+          Highscores
+          <a href="./highscores.html"></a>
+        </div>
 
-      <div class="header-item">
-        <span id="timer"> timer </span>
-      </div>
+        <div class="nav-item">Time:<span> 0 </span></div>
+      </nav>
     </header>
     <main>
       <h1>Are you ready to start</h1>
@@ -28,7 +28,7 @@
       <div id="#start-container" class="start-container">
         <button id="start-quiz" class="start-quiz">start questionnaire</button>
       </div>
-      <script src="./js/script.js"></script>
+      <script src=".js/script.js"></script>
     </main>
   </body>
 </html>
