@@ -1,4 +1,4 @@
-:root {
+.body {
   background-color: hsl(115, 86%, 14%);
   box-sizing: border-box;
   margin: 0%;
@@ -108,6 +108,28 @@ p {
   border-color: #f5c2c7;
 }
 
+.score-form {
+  text-align: center;
+  background-color: rgb(153, 226, 153);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2.5rem;
+}
+
+.form-item {
+  margin: 1rem 0;
+  width: 75%;
+}
+
+.form-item input {
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
 @media screen and (max-width: 576px) {
   .nav-container {
     flex-direction: column;
@@ -130,5 +152,10 @@ p {
     flex-direction: column;
     margin: 1rem 2.5rem;
     border: solid black;
+  }
+
+  .form-item {
+    margin: 1rem 0;
+    width: 100%;
   }
 }
