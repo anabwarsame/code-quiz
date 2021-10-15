@@ -64,6 +64,7 @@ p {
 .questions {
   font: 1.4rem;
   font-weight: 400;
+  color: white;
 }
 
 .answer-container {
@@ -93,6 +94,18 @@ p {
   border: 1px solid transparent;
   color: white;
   background-color: rgb(92, 153, 133);
+}
+
+.answer-alert-success {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+
+.answer-alert-failure {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
 }
 
 @media screen and (max-width: 576px) {
