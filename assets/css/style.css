@@ -130,6 +130,12 @@ p {
   text-align: center;
 }
 
+.game-over {
+  text-align: center;
+  background-color: rgb(153, 226, 153);
+  color: white;
+}
+
 @media screen and (max-width: 576px) {
   .nav-container {
     flex-direction: column;
