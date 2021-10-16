@@ -20,7 +20,22 @@ const capitalCityQuestions = [
     correctAnswer: "Ottawa",
   },
 ];
+const constructOptions = function (answers) {
+  const optionsContainer = document.createElement("div");
+  optionsContainer.setAttribute("class", "answer-container");
+  for (let i = 0; i < answers.length; i++) {
+    // get current option from array
+    const option = answers[i];
 
+    // create button
+    const optionButton = document.createElement("button");
+    optionButton.setAttribute("class", "answer-item");
+    optionButton.textContent = answers;
+    // append to option container
+    optionsContainer.appendChild(optionButton);
+  }
+  return optionsContainer;
+};
 const constructQuestionContainer = function (question) {
   console.log(question);
 
@@ -28,22 +43,32 @@ const constructQuestionContainer = function (question) {
   const questionContainer = document.createElement("div");
   questionContainer.setAttribute("class", "container question-container");
   console.log(questionContainer);
+
   // construct h2 element
   const questionH2 = document.createElement("h2");
   questionH2.setAttribute("class", "questions");
-  console.log(questionContainer);
+  questionH2.textContent = question.question;
+  console.log(questionH2);
+
   // construct options div
+  const answers = constructOptions(question.answers);
+  console.log(answers);
+
+  // appending h2 and options div to container div
+  questionContainer.append(questionH2, answers);
+  return questionContainer;
 };
 
 //render question container
 const renderQuestionContainer = function () {
-  // get the current question, construct html for question container
-  // append the container to document
   console.log("renderQuestionContainer");
-
+  // get the current question, construct html for question container
   const currentQuestion = capitalCityQuestions[0];
 
-  constructQuestionContainer(currentQuestion);
+  const questionContainer = constructQuestionContainer(currentQuestion);
+
+  //append container to the document
+  document.getElementById("main-container").appendChild(questionContainer);
 };
 
 const removeStartContainer = function () {
