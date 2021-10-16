@@ -20,6 +20,9 @@ const capitalCityQuestions = [
     correctAnswer: "Ottawa",
   },
 ];
+
+let count = capitalCityQuestions.length * 5;
+
 const constructOptions = function (answers) {
   const optionsContainer = document.createElement("div");
   optionsContainer.setAttribute("class", "answer-container");
@@ -82,11 +85,28 @@ const removeStartContainer = function () {
 // target start quiz button
 // add event listening to start quiz
 
+const startTimer = function () {
+  // declare timer click
+  const timerTick = function () {
+    if (count >= 0) {
+      document.getElementById("countdown").textContent = count;
+      count -= 1;
+    } else {
+      console.log("game over");
+      // render game over
+    }
+  };
+  // declare timer
+  const timer = setInterval(timerTick, 1000);
+};
+
 const startQuiz = function () {
   console.log("start");
   removeStartContainer();
 
   renderQuestionContainer();
+
+  startTimer();
 };
 const startButton = document.getElementById("start-quiz");
 
