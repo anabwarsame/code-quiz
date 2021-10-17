@@ -39,26 +39,29 @@ const constructOptions = function (answers) {
   }
   return optionsContainer;
 };
-const constructQuestionContainer = function (question) {
-  console.log(question);
 
+const verifyAnswer = function (event) {
+  const target = event.target;
+  const currentTarget = event.currentTarget;
+  if (target) {
+  }
+};
+const constructQuestionContainer = function (question) {
   // construct container div
   const questionContainer = document.createElement("div");
   questionContainer.setAttribute("class", "container question-container");
-  console.log(questionContainer);
 
   // construct h2 element
   const questionH2 = document.createElement("h2");
   questionH2.setAttribute("class", "questions");
   questionH2.textContent = question.question;
-  console.log(questionH2);
 
   // construct options div
   const answers = constructOptions(question.answers);
-  console.log(answers);
 
   // appending h2 and options div to container div
   questionContainer.append(questionH2, answers);
+  questionContainer.addEventListener("click", verifyAnswer);
   return questionContainer;
 };
 
@@ -78,7 +81,7 @@ const removeStartContainer = function () {
   console.log("removeStartContainer");
   // remove start container from document
   const startContainer = document.getElementById("start-quiz");
-  console.log(startContainer);
+
   startContainer.remove();
 };
 
@@ -92,7 +95,6 @@ const startTimer = function () {
       document.getElementById("countdown").textContent = count;
       count -= 1;
     } else {
-      console.log("game over");
       // render game over
     }
   };
