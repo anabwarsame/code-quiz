@@ -15,3 +15,7 @@
 
 - to create high scores page
 - to verify answer
+
+link to my index.HTML
+
+- http://127.0.0.1:5500/assets/index.html
