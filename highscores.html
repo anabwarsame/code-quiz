@@ -8,14 +8,28 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
   <body>
-    <header class="header-container">
-      <nav class="nav-container">
-        <div class="nav-item">
-          <a href="./index.html">Home</a>
+    <body>
+      <header class="header">
+        <nav class="nav-container">
+          <div class="nav-item">
+            <a href="./index.html">Home</a>
+          </div>
+        </nav>
+      </header>
+      <main id="main-container">
+        <div class="container start-container" id="start-container">
+          <h1 class="title">High Scores</h1>
+          <div id="high-scores"></div>
         </div>
-      </nav>
-    </header>
+        <div class="container btn-container">
+          <div>
+            <button class="btn" id="go-back-btn">Go Back</button>
+          </div>
+          <div>
+            <button class="btn" id="clear-scores-btn">Clear Scores</button>
+          </div>
+        </div>
+      </main>
       <script src="./assets/js/highscores.js"></script>
-    </main>
-  </body>
+    </body>
 </html>

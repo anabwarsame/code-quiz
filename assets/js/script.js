@@ -1,159 +1,4 @@
-// const capitalCityQuestions = [
-//   {
-//     question: "what is the capital city of portugal?",
-//     answers: ["Madrid", "Paris", "Lisbon", " Athens"],
-//     correctAnswer: "Lisbon",
-//   },
-//   {
-//     question: "what is the capital city of USA?",
-//     answers: [" Washington DC", "New York", "Los Angeles", "Boston"],
-//     correctAnswer: "Washington DC",
-//   },
-//   {
-//     question: "what is the capital city of Russia?",
-//     answers: ["Moscow", "St Petersburg", "Prague", "Riga"],
-//     correctAnswer: "Moscow",
-//   },
-//   {
-//     question: "what is the capita city of Canada?",
-//     answers: ["Toronto", "Vancouver", "Ottawa", "Quebec"],
-//     correctAnswer: "Ottawa",
-//   },
-// ];
-
-// let count = capitalCityQuestions.length * 5;
-
-// const constructOptions = function (answers) {
-//   const optionsContainer = document.createElement("div");
-//   optionsContainer.setAttribute("class", "answer-container");
-//   for (let i = 0; i < answers.length; i++) {
-//     // get current option from array
-//     const option = answers[i];
-
-//     // create button
-//     const optionButton = document.createElement("button");
-//     optionButton.setAttribute("class", "answer-item");
-//     optionButton.textContent = answers[i];
-//     // append to option container
-//     optionsContainer.appendChild(optionButton);
-//   }
-//   return optionsContainer;
-// };
-
-// const verifyAnswer = function (event) {
-//   const target = event.target;
-//   const currentTarget = event.currentTarget;
-
-//   // check if click is from button ONLY
-//   if (target.getAttribute("name") === "option") {
-//     console.log("verify");
-//     // get the option user clicked on
-//     const userOption = target.getAttribute("data-option");
-
-//     // get the correct option for the question
-//     const correctOption = currentTarget.getAttribute("data-correct");
-
-//     // verify the 2
-//     if (userOption !== correctOption) {
-//       // time penalty deduct 5 seconds
-//       count -= 5;
-//       renderDangerAlert();
-//       if (count > 0) {
-//         document.getElementById("countdown").textContent = count;
-//       } else {
-//         document.getElementById("countdown").textContent = 0;
-//       }
-//     } else {
-//       renderSuccessAlert();
-//     }
-
-//     // go to next question 0 1 2 (3)
-//     currentQuestionIndex += 1;
-
-//     // check if last question
-//     if (currentQuestionIndex < movieQuestions.length) {
-//       // render the next question
-//       removeQuestionContainer();
-//       renderQuestionContainer();
-//     } else {
-//       if (count > 0) {
-//         renderScoreForm();
-//       } else {
-//         removeQuestionContainer();
-//         renderGameOver();
-//       }
-//     }
-//   }
-// };
-// const constructQuestionContainer = function (question) {
-//   // construct container div
-//   const questionContainer = document.createElement("div");
-//   questionContainer.setAttribute("class", "container question-container");
-
-//   // construct h2 element
-//   const questionH2 = document.createElement("h2");
-//   questionH2.setAttribute("class", "questions");
-//   questionH2.textContent = question.question;
-
-//   // construct options div
-//   const answers = constructOptions(question.answers);
-
-//   // appending h2 and options div to container div
-//   questionContainer.append(questionH2, answers);
-//   questionContainer.addEventListener("click", verifyAnswer);
-//   return questionContainer;
-// };
-
-// //render question container
-// const renderQuestionContainer = function () {
-//   console.log("renderQuestionContainer");
-//   // get the current question, construct html for question container
-//   const currentQuestion = capitalCityQuestions[0];
-
-//   const questionContainer = constructQuestionContainer(currentQuestion);
-
-//   //append container to the document
-//   document.getElementById("main-container").appendChild(questionContainer);
-// };
-
-// const removeStartContainer = function () {
-//   console.log("removeStartContainer");
-//   // remove start container from document
-//   const startContainer = document.getElementById("start-quiz");
-
-//   startContainer.remove();
-// };
-
-// // target start quiz button
-// // add event listening to start quiz
-
-// const startTimer = function () {
-//   // declare timer click
-//   const timerTick = function () {
-//     if (count >= 0) {
-//       document.getElementById("countdown").textContent = count;
-//       count -= 1;
-//     } else {
-//       // render game over
-//     }
-//   };
-//   // declare timer
-//   const timer = setInterval(timerTick, 1000);
-// };
-
-// const startQuiz = function () {
-//   console.log("start");
-//   removeStartContainer();
-
-//   renderQuestionContainer();
-
-//   startTimer();
-// };
-// const startButton = document.getElementById("start-quiz");
-
-// // add event listening to start quiz
-// startButton.addEventListener("click", startQuiz);
-const movieQuestions = [
+const capitalCityQuestions = [
   {
     question: "what is the capital city of portugal?",
     answers: ["Madrid", "Paris", "Lisbon", " Athens"],
@@ -177,7 +22,7 @@ const movieQuestions = [
 ];
 
 let currentQuestionIndex = 0;
-let count = movieQuestions.length * 500;
+let count = capitalCityQuestions.length * 500;
 // let count = 5;
 
 const constructOptions = function (answers) {
@@ -371,7 +216,7 @@ const verifyAnswer = function (event) {
     currentQuestionIndex += 1;
 
     // check if last question
-    if (currentQuestionIndex < movieQuestions.length) {
+    if (currentQuestionIndex < capitalCityQuestions.length) {
       // render the next question
       removeQuestionContainer();
       renderQuestionContainer();
@@ -413,7 +258,7 @@ const constructQuestionContainer = function (question) {
 // render question container
 const renderQuestionContainer = function () {
   // get the current question
-  const currentQuestion = movieQuestions[currentQuestionIndex];
+  const currentQuestion = capitalCityQuestions[currentQuestionIndex];
 
   // construct the HTML for the question container
   const questionContainer = constructQuestionContainer(currentQuestion);
@@ -450,7 +295,7 @@ const renderGameOver = function () {
 const startTimer = function () {
   // declare the timer tick function
   const timerTick = function () {
-    if (currentQuestionIndex >= movieQuestions.length) {
+    if (currentQuestionIndex >= capitalCityQuestions.length) {
       clearInterval(timer);
     } else if (count < 0) {
       clearInterval(timer);
