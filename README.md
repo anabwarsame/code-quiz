@@ -18,7 +18,9 @@
 
 - make css styling a little neater
 
-- http://127.0.0.1:5500/assets/index.html
+## link to repository
+
+- https://anabwarsame.github.io/code-quiz/
 
 ## screenshots
 
