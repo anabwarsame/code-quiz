@@ -22,7 +22,7 @@ const capitalCityQuestions = [
 ];
 
 let currentQuestionIndex = 0;
-let count = capitalCityQuestions.length * 500;
+let count = capitalCityQuestions.length * 5;
 // let count = 5;
 
 const constructOptions = function (answers) {
