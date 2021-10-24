@@ -10,12 +10,12 @@
 - the user presses a start button that will not lead them to the first set of questions
 - a timer function has been added
 - a link to the high scores page has been added
+- added code to verify correct answer
+- added timer to countdown by 5 seconds if you get the wrong answer
+- added a high scores page to log all of your high scores on a separate page
 
 ## TO DO
 
-- to create high scores page
-- to verify answer
-
-link to my index.HTML
+- make css styling a little neater
 
 - http://127.0.0.1:5500/assets/index.html
